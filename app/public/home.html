@@ -10,7 +10,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <style type="text/css">
         body {
-            background-image: url("https://s-media-cache-ak0.pinimg.com/736x/72/13/08/72130823cfd2175ee87afa037833e19a.jpg");
+            content: ' ';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.8;
+            background-image: url('https://s-media-cache-ak0.pinimg.com/736x/72/13/08/72130823cfd2175ee87afa037833e19a.jpg');
+            background-repeat: no-repeat;
+            background-position: 50% 0;
+            background-size: cover;
             font-family: 'Gloria Hallelujah', cursive;
         }
         h1, h2 {
@@ -18,6 +30,13 @@
         }
         .container .jumbotron h1 {
             color: red;
+        }
+        .container .jumbotron .start a button h4 {
+            color: #ffffff;
+        }
+        .footer .container p a {
+            background-color: red;
+            color: #ffffff;
         }
     </style>
 </head>
@@ -33,7 +52,7 @@
             <br>
 
             <div class="start">
-                <a href="/survey"><button type="button" class="btn btn-lg btn-info center-block" id="surveybutton"><h4></span>Friend Finder Survey</h4></button></a>    
+                <a href="/survey"><button type="button" class="btn btn-lg btn-info center-block" id="surveybutton"><h4>Friend Finder Survey</h4></button></a>    
             </div>
 
         </div>

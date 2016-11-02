@@ -10,15 +10,17 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <style type="text/css">
-    body {
-        background-color: skyblue;
-        font-family: 'Gloria Hallelujah', cursive;
-    }
+        body {
+            background-color: skyblue;
+            font-family: 'Gloria Hallelujah', cursive;
+        }
     
-    h1,
-    h2 {
+        h1, h2 {
         font-family: 'Gloria Hallelujah', cursive;
-    }
+        }
+        .modal-header, .modal-footer {
+            background-color: red;
+        }
     </style>
 </head>
 
@@ -163,7 +165,6 @@
     <script type="text/javascript">
     // Capture the form inputs upon submission
     $("#submit").on("click", function() {
-
         // Create an object for the user's data
         var newFriend = {
             name: $("#name").val().trim(),
@@ -175,19 +176,14 @@
             alert("You did not complete the form");
             return;
         } else {
-
-        }
-
+        
         // Grab the URL of the website
         var currentURL = window.location.origin;
-
         // AJAX post the data to the friends API. 
         $.post(currentURL + "/api/friends", newFriend, function(data) {
-
             // Grab the result from the AJAX post so that the best match's name and photo are displayed.
             $("#matchName").text(data.name);
             $('#matchImg').attr("src", data.photo);
-
             // Show the modal with the best match 
             $("#resultsModal").modal('toggle');
             //clear inputs
@@ -204,7 +200,7 @@
             $("#q9").val("");
             $("#q10").val("");
         });
-
+        }
         return false;
     });
     </script>
