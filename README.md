@@ -10,4 +10,4 @@
 ###This app was built using HTML, CSS, Bootstrap, jQuery, Node.js, and Express.js.
 
 ###Below is an image of the Friend Finder app.
-![Friend Finder](friendfinder.png)
+![Friend Finder](app/public/friendfinder.png)
